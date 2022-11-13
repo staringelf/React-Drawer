@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="grid grid-cols-[11fr_3fr]">
-      <Collection products={products} setItems={setItems}/>
+      <Collection products={products} items={items} setItems={setItems}/>
       <Drawer items={items} setItems={setItems}/>
     </div>
   );
