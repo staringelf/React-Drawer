@@ -14,12 +14,6 @@ function Product ({ product, items, setItems }) {
       quantity: 1
     }
 
-    const productInCart = items.find(item => item.id === product.id);
-
-    if (productInCart) {
-      item.quantity = productInCart.quantity + 1;
-    }
-
     setItems([
       ...items,
       item
