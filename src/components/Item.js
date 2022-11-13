@@ -3,7 +3,7 @@ import slug from "slug";
 import { formatMoney } from "../lib/helpers";
 
 function Item ({ item, updateItem, removeItem }) {
-  const { name, price, id } = item;
+  const { name, price, id, inventory } = item;
 
   const [quantity, setQuantity] = useState(item.quantity);
 
@@ -16,6 +16,10 @@ function Item ({ item, updateItem, removeItem }) {
   }
 
   function incrementQuantity(e) {
+    if (quantity >= inventory){
+      alert('No More Available');
+      return;
+    }
     setQuantity(quantity + 1);
   }
 
