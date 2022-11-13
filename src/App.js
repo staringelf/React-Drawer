@@ -1,12 +1,12 @@
 import './App.css';
-import { useState } from 'react';
 import { products } from './lib/model';
+import useLocalStorage from './lib/useLocalStorage';
 import Collection from './components/Collection';
 import Drawer from './components/Drawer';
 
 function App() {
 
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useLocalStorage('react-cart', []);
 
   function addItem (product) {
     console.log(items);
