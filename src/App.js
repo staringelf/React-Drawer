@@ -36,8 +36,8 @@ function App() {
   }
 
   return (
-    <div className="grid grid-cols-[11fr_3fr]">
-      <Collection products={products} items={items} addItem={addItem}/>
+    <div className="grid grid-cols-[10fr_3fr]">
+      <Collection products={products} addItem={addItem}/>
       <Drawer items={items} updateItem={updateItem} removeItem={removeItem}/>
     </div>
   );
