@@ -2,30 +2,18 @@ import { useState } from "react";
 import slug from "slug";
 import { formatMoney } from '../lib/helpers';
 
-function Product ({ product, items, setItems }) {
+function Product ({ product, addItem }) {
   
-  const { name, price, inventory, id } = product;
+  const { name, price, inventory } = product;
 
   const [stock, setStock] = useState(inventory);
-
-  function addToCart () {
-    const item = {
-      ...product,
-      quantity: 1
-    }
-
-    setItems([
-      ...items,
-      item
-    ]);
-  }
 
   function handleClick(){
     if (!stock) {
       alert('Out of stock')
       return;
     }
-    addToCart();
+    addItem(product);
     setStock(stock - 1);
   }
 
