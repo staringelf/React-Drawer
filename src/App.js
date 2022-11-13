@@ -18,8 +18,8 @@ function App() {
       quantity: 1
     }
     setItems([
-      ...items,
-      item
+      item,
+      ...items
     ]);
   }
 

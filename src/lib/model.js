@@ -24,16 +24,16 @@ const products = [
       "id": "1014"
     },
     {
-      "name": "Headphones",
-      "price": 100000,
-      "inventory": 6,
-      "id": "1015"
-    },
-    {
       "name": "Insta Click",
       "price": 90000,
       "inventory": 2,
       "id": "1016"
+    },
+    {
+      "name": "Lamp",
+      "price": 10000,
+      "inventory": 11,
+      "id": "1021"
     },
     {
       "name": "Camera",
@@ -54,16 +54,16 @@ const products = [
       "id": "1019"
     },
     {
+      "name": "Headphones",
+      "price": 100000,
+      "inventory": 6,
+      "id": "1015"
+    },
+    {
       "name": "Bag",
       "price": 4000,
       "inventory": 3,
       "id": "1020"
-    },
-    {
-      "name": "Lamp",
-      "price": 10000,
-      "inventory": 11,
-      "id": "1021"
     }
 ];
 
