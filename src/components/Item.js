@@ -8,6 +8,13 @@ function Item ({ item, updateItem, removeItem }) {
   const [quantity, setQuantity] = useState(item.quantity);
 
   useEffect(() => {
+    setQuantity(item.quantity);
+  }, [item.quantity]);
+
+  console.log('quantity: ', quantity);
+  console.log('item-quantity: ', quantity);
+  
+  useEffect(() => {
     quantity > 0 ? updateItem(id, quantity) : removeItem(id);
   }, [quantity] );
 

@@ -1,8 +1,8 @@
 import './App.css';
+import { useState } from 'react';
 import { products } from './lib/model';
 import Collection from './components/Collection';
 import Drawer from './components/Drawer';
-import { useState } from 'react';
 
 function App() {
 
@@ -10,9 +10,11 @@ function App() {
 
   function addItem (product) {
     console.log(items);
-    const itemIsInCart = items.find((item) => item.id === product.id);
-    console.log(itemIsInCart);
-    if (itemIsInCart) return; 
+    const itemInCart = items.find((item) => item.id === product.id);
+    if (itemInCart) {
+      updateItem(product.id, itemInCart.quantity + 1)
+      return;
+    } 
     const item = {
       ...product,
       quantity: 1

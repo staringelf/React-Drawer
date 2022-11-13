@@ -1,6 +1,5 @@
 import DrawerFooter from "./DrawerFooter";
 import Item from "./Item";
-import { useEffect, useState } from "react";
 
 function Drawer ({ items, updateItem, removeItem }) {
 
