@@ -1,15 +1,11 @@
 import { products } from '../lib/model';
-import slug from 'slug';
+import Product from './Product';
 
 function Collection () {
   return (
-    <div>
+    <div className="p-10 grid grid-cols-3 gap-10">
       {products.map((product) => (
-        <div className="product">
-          <img src={`../images/${slug(product.name)}.jpg`} alt={product.name}/>
-          <h2>{ product.name }</h2>
-          <p>{ product.price }</p>
-        </div>
+        <Product key={product.name} product={product} />
       ))}
     </div>
   )
